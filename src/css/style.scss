@@ -1,0 +1,23 @@
+$primary-color: #012283;
+$secondary-color:#001655;
+$light-color: #5872C1;
+$ternary-color:#3155C1;
+$light-gray-color:#F0F0F0;
+$body-font: 'Oswald', sans-serif;
+
+%image-shared{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body {
+    font-family: $body-font;
+}
+
+.masthead {
+    @extend %image-shared;
+    height: 100vh;
+    min-height: 500px;
+    background-image: url('../img/banner.jpg');
+}

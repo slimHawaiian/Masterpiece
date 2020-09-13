@@ -1,0 +1,12 @@
+.masthead {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+body {
+  font-family: "Oswald", sans-serif; }
+
+.masthead {
+  height: 100vh;
+  min-height: 500px;
+  background-image: url("../img/banner.jpg"); }
