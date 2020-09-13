@@ -9,27 +9,30 @@ const Navigation = ()=> {
         setNavIsOpen(!isNavOpen);
     }
 
-    return (            
-        <Navbar light sticky="top" expand="md">
-            <div className="container">
-                <NavbarBrand className="pr-5" href="/"><h2>Masterpiece</h2></NavbarBrand>
-                <NavbarToggler onClick={() => toggleNav()} />
-                <Collapse isOpen={isNavOpen} navbar>
-                    <Nav navbar>
-                        <NavItem>
-                            <NavLink className="nav-link" to="/home">
-                                <i className="fa fa-home fa-lg" /> Home
-                            </NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink className="nav-link" to="/artists">
-                                <i className="fa fa-user" /> Artists
-                            </NavLink>
-                        </NavItem>
-                    </Nav>
-                </Collapse>
-            </div>
-        </Navbar>
+    return ( 
+        <div className='container-fluid nav-background mb-3 bg-primary'>       
+            <Navbar dark sticky="top" expand="md">
+                
+                    <div className="container">
+                        <NavbarBrand className="" href="/"><h2>Masterpiece</h2></NavbarBrand>
+                        <NavbarToggler onClick={() => toggleNav()} />
+                        <Collapse isOpen={isNavOpen} navbar>
+                            <Nav navbar>
+                                <NavItem>
+                                    <NavLink className="nav-link" to="/home">
+                                        <i className="fa fa-home fa-lg" /> Home
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink className="nav-link" to="/artists">
+                                        <i className="fa fa-user" /> Artists
+                                    </NavLink>
+                                </NavItem>
+                            </Nav>
+                        </Collapse>
+                    </div>
+            </Navbar>
+        </div>
     );
 }
 
