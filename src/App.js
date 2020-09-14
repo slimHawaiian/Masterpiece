@@ -1,21 +1,19 @@
 import React from 'react';
-import {BrowserRouter as Router,Switch,Route,Redirect} from "react-router-dom";
-import Home from './pages/home';
-import Landing from './pages/landing';
-import Artists from './pages/artists';
+import {BrowserRouter as Router} from "react-router-dom";
+import { Provider } from 'react-redux';
+import { ConfigureStore } from './redux/configureStore';
+import Main from './components/MainComponent';
 
 
 function App() {
+  const store = ConfigureStore();
+  
   return (
-    <Router>
-        <Switch>
-          <Route path='/home' component={Home} />
-          <Route path='/artists' component={Artists} />
-          <Route path='/' component={Landing} />
-
-          <Redirect to='/'/>
-        </Switch>
+    <Provider store={store}>
+      <Router>
+          <Main/>
       </Router>
+    </Provider>
   );
 }
 

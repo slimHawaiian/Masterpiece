@@ -1,0 +1,3 @@
+export const GET_ARTISTS = 'GET_ARTISTS';
+export const GET_ARTISTS_FAILED = 'GET_ARTISTS_FAILED';
+export const ADD_ARTISTS = 'ADD_ARTISTS';

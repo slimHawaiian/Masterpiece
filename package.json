@@ -2,6 +2,7 @@
   "name": "masterpiece",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:4000/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -9,12 +10,17 @@
     "bootstrap": "^4.5.2",
     "font-awesome": "^4.7.0",
     "node-sass": "^4.14.1",
+    "oswald-fontface": "^1.0.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-popper": "^2.2.3",
+    "react-redux": "^7.2.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
-    "reactstrap": "^8.5.1"
+    "reactstrap": "^8.5.1",
+    "redux": "^4.0.5",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
     "start": "react-scripts start",

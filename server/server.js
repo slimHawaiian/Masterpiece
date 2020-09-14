@@ -1,6 +1,7 @@
 const express = require('express');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
+const artistRouter = require('./routes/artistRouter');
 
 const hostname = 'localhost';
 const port = 4000;
@@ -9,7 +10,7 @@ const app = express();
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 
-//add routes here
+app.use('/artists',artistRouter);
 
 app.use(express.static(__dirname + '/public'));
 
