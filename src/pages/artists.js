@@ -18,8 +18,8 @@ const Artists = props =>{
                                     </div> 
                                 </div>
                                 <div className='row'>
-                                    <div className='col-md-6'>
-                                        <img src={require('../img/artist/rembrant.jpg')} alt={x.name}/>   
+                                    <div className='col-md-3'>
+                                        <img className='rounded-circle' height='200' src={require('../img/artist/rembrant.jpg')} alt={x.name}/>   
                                     </div>   
                                     <div className='col-md-6'>
                                         <p>{x.bio}</p>
