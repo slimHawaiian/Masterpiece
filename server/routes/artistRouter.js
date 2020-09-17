@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const artists = require('../data/artist');
+const artists = require('../data/artists');
 
 const artistRouter = express.Router();
 
@@ -13,7 +13,7 @@ artistRouter.route('/')
     next();
 })
 .get((req, res) => {
-    res.send(artists);
+    res.json(artists);
 });
 
 module.exports = artistRouter;

@@ -1,12 +1,13 @@
-export const artists =
+exports.artists =
    [
     {
         id:1,
-        name: "artist1",
-        years:"1900-1901",
-        genre: "modern",
-        nationality:"nationality",
+        name: "Rembrandt Harmenszoon van Rijn",
+        years:"1606-1669",
+        genre: "portraiture, landscape and narrative painting",
+        nationality:"dutch",
         bio:"bio",
+        image:'~/img/artist/rembrant.jpg',
         wikipedia:"wikipedia",
     	paintings:"4"    
     },
@@ -17,6 +18,7 @@ export const artists =
         genre: "modern",
         nationality:"nationality",
         bio:"bio",
+        image:'/img/artist/rembrant.jpg',
         wikipedia:"wikipedia",
     	paintings:"4"    
     },
@@ -27,6 +29,7 @@ export const artists =
         genre: "modern",
         nationality:"nationality",
         bio:"bio",
+        image:'/img/artist/rembrant.jpg',
         wikipedia:"wikipedia",
     	paintings:"4"    
     },

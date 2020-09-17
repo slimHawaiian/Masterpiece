@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors')
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const artistRouter = require('./routes/artistRouter');
@@ -7,6 +8,7 @@ const hostname = 'localhost';
 const port = 4000;
 
 const app = express();
+app.use(cors())
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 

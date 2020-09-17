@@ -5,9 +5,9 @@ import { fetchArtists } from '../redux/actionCreators';
 import Home from '../pages/home';
 import Artists from '../pages/artists';
 import Landing from '../pages/landing';
+import Settings from '../pages/settings';
 
 const mapStateToProps = state => {
-    console.log('state',state);
     return {
         artists: state.artists
     }
@@ -37,9 +37,14 @@ class  Main extends Component{
                 <Landing />
             )
         }
+
+        const SettingsPage = () =>{
+            return(
+                <Settings />
+            )
+        }
     
         const ArtistPage = () =>{
-            console.log('artist page',this.props.artists);
             return(
                 <Artists Artists={this.props.artists}
                     artistsLoading={this.props.artists && this.props.artists.isLoading}
@@ -50,6 +55,7 @@ class  Main extends Component{
             <Switch>
                 <Route path='/home' component={HomePage} />
                 <Route path='/artists' component={ArtistPage} />
+                <Route path='/settings' component={SettingsPage} />
                 <Route path='/' component={LandingPage} />
 
                 <Redirect to='/'/>
