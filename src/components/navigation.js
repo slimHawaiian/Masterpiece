@@ -10,7 +10,7 @@ const Navigation = ()=> {
     }
 
     return ( 
-        <div className='container-fluid nav-background mb-3 bg-primary'>       
+        <div className='container-fluid nav-background mb-3 bg-dark'>       
             <Navbar dark sticky="top" expand="md">
                 
                     <div className="container">

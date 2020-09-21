@@ -4,7 +4,7 @@
   "description": "server for the masterpiece website",
   "main": "server.js",
   "scripts": {
-    "start": "node server",
+    "start": "nodemon server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "PT",
@@ -13,6 +13,8 @@
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "morgan": "^1.10.0"
+    "mongoose": "^5.10.6",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.4"
   }
 }
