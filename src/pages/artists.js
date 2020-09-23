@@ -1,7 +1,10 @@
 import React from 'react';
 import Navigation from '../components/navigation';
-var bioImages = require.context('../img/artist', true);
-var galleryImages = require.context('../img/thumb', true);
+import Footer from '../components/footer';
+import { Link } from 'react-router-dom';
+const bioImages = require.context('../img/artist', true);
+const galleryImages = require.context('../img/thumb', true);
+
 
 const Artists = props =>{   
     const artists = props.Artists.artists;
@@ -14,7 +17,6 @@ const Artists = props =>{
                     artists && artists.slice(0, 5).map((x,i)=> {
                        const imageLink = bioImages(`./${x.name}.jpg`);
                        const galleryLink = galleryImages(`./${x.name}.jpg`);
-                       console.log('name',x.name);
                        return(
                         <div className= 'row' key={i}>
                                 <div className='col mb-5 p-2 pb-3 pl-3 border rounded-lg border-dark border-bottom-5 '>
@@ -37,10 +39,10 @@ const Artists = props =>{
                                         <p>{x.nationality}</p>
                                         <p>{x.genre}</p>
                                         <p>{x.years}</p>
-                                        <p><a target = '_blank' href={x.wikipedia}>Learn more</a></p>
+                                        <p><a target = '_blank' rel="noopener noreferrer" href={x.wikipedia}>Learn more</a></p>
                                     </div>
                                     <div className='col-md-4 text-right'>
-                                        <a href='#' ><img className='rounded' height='150' width='150' src={galleryLink} alt={x.name} /></a> 
+                                        <Link to={`/images/${x._id}`}><img className='rounded' height='150' width='150' src={galleryLink} alt={x.name} /></Link> 
                                     </div>
                                 </div>
                             </div> 
@@ -48,6 +50,7 @@ const Artists = props =>{
                     )})
                 }
             </div>
+            <Footer/>
         </>
     )
 }
