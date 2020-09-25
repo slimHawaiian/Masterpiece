@@ -13,6 +13,7 @@ $body-font: 'Oswald', sans-serif;
 
 body {
     font-family: $body-font;
+    background-color: #6c757d;
 }
 
 .masthead {
@@ -21,3 +22,15 @@ body {
     min-height: 500px;
     background-image: url('../img/banner.jpg');
 }
+
+.breadcrumb{
+    background-color:#6c757d;
+}
+
+.breadcrumb-item.active {
+    color: #F0F0F0;
+    text-decoration: none;
+ }
+ .breadcrumb a, .breadcrumb-item.active::before{
+     color:#343a40;
+ }

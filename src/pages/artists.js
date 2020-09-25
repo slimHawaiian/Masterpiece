@@ -19,29 +19,28 @@ const Artists = props =>{
                        const galleryLink = galleryImages(`./${x.name}.jpg`);
                        return(
                         <div className= 'row' key={i}>
-                                <div className='col mb-5 p-2 pb-3 pl-3 border rounded-lg border-dark border-bottom-5 '>
+                                <div className='col my-2 bg-white p-2 pb-2 pl-3 border rounded-lg border-dark border-bottom-5 '>
                                 <div className='row text-center'>
                                     <div className='col mb-2 pt-2'> 
                                         <h2>{x.name}</h2>
                                     </div> 
                                 </div>
                                 <div className='row'>
-                                    <div className='col-md-3 text-center'>
-                                        <img className='rounded-circle' height='250' src={imageLink} alt={x.name}/>   
+                                    <div className='col-md-2 text-center'>
+                                        <a target = '_blank' rel="noopener noreferrer" href={x.wikipedia}><img className='rounded-circle' height='180' src={imageLink} alt={x.name}/>  </a> 
                                     </div>   
-                                    <div className='col-md-8'>
+                                    <div className='col-md-10 pr-4'>
                                         <p>{x.bio}</p>
-                                    </div>  
+                                    </div> 
                                 </div> 
                                 <div className='row'>
-                                    <div className='col-md-3'></div>
-                                    <div className='col-md-4'>
+                                    <div className='col-md-2'></div>
+                                    <div className='col-md-5'>
                                         <p>{x.nationality}</p>
                                         <p>{x.genre}</p>
                                         <p>{x.years}</p>
-                                        <p><a target = '_blank' rel="noopener noreferrer" href={x.wikipedia}>Learn more</a></p>
                                     </div>
-                                    <div className='col-md-4 text-right'>
+                                    <div className='col-md-5 text-right pr-4'>
                                         <Link to={`/images/${x._id}`}><img className='rounded' height='150' width='150' src={galleryLink} alt={x.name} /></Link> 
                                     </div>
                                 </div>
