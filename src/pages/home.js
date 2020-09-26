@@ -6,7 +6,7 @@ const Home = ()=>{
     return(
         <>
             <Navigation/>
-            <div className=" container">
+            <div className=" container mb-2">
                 <div className='row'>
                     <div className='col text-center'>
                     <h1 className="display-4 text-center">Welcome To Masterpiece!</h1>

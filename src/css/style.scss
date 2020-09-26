@@ -1,36 +1,31 @@
-$primary-color: #012283;
-$secondary-color:#001655;
-$light-color: #5872C1;
-$ternary-color:#3155C1;
-$light-gray-color:#F0F0F0;
+$background-color: #6c757d;
+$breadcrumb-text-color:#F0F0F0;
+$breadcrumb-active-color:#343a40;
 $body-font: 'Oswald', sans-serif;
 
-%image-shared{
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
 
 body {
     font-family: $body-font;
-    background-color: #6c757d;
+    background-color: $background-color;
 }
 
 .masthead {
-    @extend %image-shared;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     height: 100vh;
     min-height: 500px;
     background-image: url('../img/banner.jpg');
 }
 
 .breadcrumb{
-    background-color:#6c757d;
+    background-color:$background-color;
 }
 
 .breadcrumb-item.active {
-    color: #F0F0F0;
+    color: $breadcrumb-text-color;
     text-decoration: none;
  }
  .breadcrumb a, .breadcrumb-item.active::before{
-     color:#343a40;
+     color:$breadcrumb-active-color;
  }
