@@ -7,7 +7,6 @@ import Artists from '../pages/artists';
 import Landing from '../pages/landing';
 import Settings from '../pages/settings';
 import Images from '../pages/images';
-import Carousel from '../pages/carousel';
 
 const mapStateToProps = state => {
     return {
@@ -46,9 +45,9 @@ class  Main extends Component{
             )
         }
         const ImagesPage = ({match}) =>{
+
             const id = match.params.artistId;
             const artist = this.props.artists.artists.find(x  => x._id === id);
-            console.log('artist',id,artist);
             return(
                 <Images Artist={artist} />
             )
@@ -60,11 +59,6 @@ class  Main extends Component{
                     artistsLoading={this.props.artists && this.props.artists.isLoading}
                     artistsErrMess={this.props.artists && this.props.artists.errMess}/>
             )
-        }
-
-        const CarouselPage = () =>{
-            return <Carousel/>
-
         }
 
         return (

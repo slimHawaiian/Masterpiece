@@ -1,5 +1,4 @@
 import React from 'react';
-import { setGlobalCssModule } from 'reactstrap/lib/utils';
 
 const Footer = ()=> {
 
