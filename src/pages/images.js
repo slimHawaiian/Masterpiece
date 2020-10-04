@@ -33,7 +33,7 @@ const Images = props =>{
       const nameFormatted = `${nameArray[0]}_${nameArray[1]}`;
       const tempItems = [];
 
-      for(let i=1;i<20;i++){
+      for(let i=1;i<40;i++){
         const imageloc = `${nameFormatted}/${nameFormatted}_${i}.jpg`;
         const image = {src:imageloc,altText:nameFormatted};
         tempItems.push(image);
@@ -55,7 +55,6 @@ const Images = props =>{
   }
 
   const slides = items.map(item => {
-    console.log('item',item);
     return (
       <CarouselItem onExiting={() => setAnimating(true)} onExited={() => setAnimating(false)} key={item.src}>
         <img src={galleryImages(`./${item.src}`)} height='700' alt={item.altText} />
@@ -65,14 +64,14 @@ const Images = props =>{
     return(
         <>
           <Navigation/>
-            <div className='container-fluid bg-secondary'>
+            <div className='container-fluid bg-secondary mb-2'>
                 <div className='row'>
                     <div className='col-md-12 text-center'>
                       <Breadcrumb>
                         <BreadcrumbItem><Link to="/artists">Artists</Link></BreadcrumbItem>
                         <BreadcrumbItem active>{artist && artist.name}</BreadcrumbItem>
                       </Breadcrumb>
-                      <h2 className='text-center mb-4 bg-secondary text-white'>{artist && artist.name}</h2>
+                      <h2 className='text-center mb-2 bg-secondary text-white'>{artist && artist.name}</h2>
                       <Carousel activeIndex={activeIndex} next={next} previous={previous}>
                           {slides}
                           <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />

@@ -28,11 +28,11 @@ const Navigation = ()=> {
                                         <i className="fa fa-user" /> Artists
                                     </NavLink>
                                 </NavItem>
-                                <NavItem>
+                                {/* <NavItem>
                                     <NavLink className="nav-link" to="/settings">
                                         <i className="fa fa-gear" /> Settings
                                     </NavLink>
-                                </NavItem>
+                                </NavItem> */}
                             </Nav>
                         </Collapse>
                     </div>

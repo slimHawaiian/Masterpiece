@@ -9,7 +9,6 @@ artistRouter.route('/')
 .get((req, res,next) => {
     Artist.find()
     .then(artists => {
-        console.log('artists',artists);
         res.statusCode=200;
         res.setHeader('Content-Type','application/json');
         res.json(artists);

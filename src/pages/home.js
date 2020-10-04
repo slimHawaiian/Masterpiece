@@ -10,7 +10,7 @@ const Home = ()=>{
                 <div className='row'>
                     <div className='col text-center'>
                     <h1 className="display-4 text-center">Welcome To Masterpiece!</h1>
-                    <img width='1000' src={require('../img/currator.jpg')}></img>
+                    <img width='1000' src={require('../img/intro.jpeg')}></img>
                     </div>
                 </div>
                 <div className='row'>
@@ -20,13 +20,21 @@ const Home = ()=>{
                 </div>
                 <div className='row' style={{height:'200px'}}>
                     <div className='col-md-4 text-center'>
-                        <img width='150' height='150' src={require('../img/artist/Diego Rivera.jpg')}></img>
+                        <a href= '/images/5f67599c11eb5e0b6ebaf33a'>
+                            <img width='150' height='150' src={require('../img/artist/Diego Rivera.jpg')}></img>
+                        </a>
+                       
                     </div>
                     <div className='col-md-4 text-center '>
-                        <img width='150' height='150' src={require('../img/artist/Rene Magritte.jpg')}></img>
+                        <a href='/images/5f67599c11eb5e0b6ebaf33c'>
+                            <img width='150' height='150' src={require('../img/artist/Rene Magritte.jpg')}></img>                      
+                        </a>
+                        
                     </div>
                     <div className='col-md-4 text-center'>
-                        <img width='150' height='150' src={require('../img/artist/Vasiliy Kandinskiy.jpg')}></img> 
+                        <a href='/images/5f67599c11eb5e0b6ebaf339'>
+                            <img width='150' height='150' src={require('../img/artist/Vasiliy Kandinskiy.jpg')}></img> 
+                        </a>
                     </div>
                 </div>
                 <div className='row'>
